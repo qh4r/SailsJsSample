@@ -36,10 +36,25 @@ module.exports.routes = {
     view: 'homepage'
   },
 
-  '/test':{
-    view: 'test'
-  }
+  //'/test':{
+  //  view: 'test'
+  //},
 
+
+  'GET /test':{
+    controller: 'UserController',
+    action: 'findOne'
+  },
+
+  'GET /test/:username':{
+    controller: 'UserController',
+    action: 'findOne'
+  },
+
+  '/things/:id/giveToUser/:owner':{
+    controller: 'ThingsController',
+    action: 'giveToUser'
+  }
   /***************************************************************************
   *                                                                          *
   * Custom routes here...                                                    *

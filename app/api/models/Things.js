@@ -10,7 +10,13 @@ module.exports = {
   attributes: {
     test:{
       type: 'string'
-    }
+    },
+    owner:{
+      model: 'User'
+    },
+    //leastFavoriteOf: {
+    //  model: 'User',
+    //}
   }
 
 };

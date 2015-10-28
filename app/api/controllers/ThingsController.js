@@ -6,6 +6,15 @@
  */
 
 module.exports = {
-	
+
+  giveToUser: function (req, res) {
+    Things.update({id: req.param('id')}, {
+      owner: req.param('owner')
+    }).exec(function (err) {
+      if (err)return res.negotiate(err);
+
+      res.ok();
+    })
+  }
 };
 
